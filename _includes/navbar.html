@@ -1,0 +1,35 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="{{ site.url }}/index.html">France Budo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                {% if include.hover == "index" %}
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 active" href="{{ site.url }}/index.html">Accueil</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ site.url }}/index.html">Accueil</a></li>
+                {% endif %}
+                {% if include.hover == "about" %}
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 active" href="{{ site.url }}/about.html">A propos</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ site.url }}/about.html">A propos</a></li>
+                {% endif %}
+                {% if include.hover == "videos" %}
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 active" href="{{ site.url }}/videoS.HTMl">Vidéos</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ site.url }}/videos.html">Vidéos</a></li>
+                {% endif %}
+                {% if include.hover == "contact" %}
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 active" href="{{ site.url }}/contact.html">Contact</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ site.url }}/contact.html">Contact</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+

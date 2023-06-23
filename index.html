@@ -1,0 +1,48 @@
+---
+layout: default
+title: Le blog du Budoka et du Yoseikan Budo.
+author: Hervé Beraud
+description: |
+    Suivre l'actualité du Yoseikan Budo. Découvrez nos programmes
+    de renforcement musculaire et de mobilité. Devenez un combattant en meilleure santé
+    avec nous.
+hover: index
+---
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{ site.url }}/assets/img/home-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Oss !</h1>
+                    <span class="subheading">Bienvenue sur France Budo, le blog du Budoka et du pratiquant de Yoseikan Budo - Retrouvez toutes nos actualités, nos programmes de préparation physique et de mobilité et bien plus encore.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            {% for post in site.posts %}
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="{{ post.url }}">
+                    <h2 class="post-title">{{ post.title }}</h2>
+                    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                </a>
+                <p class="post-meta">
+                    Posté par
+                    <a href="{{ site.url }}/about.html#auteurs">{{ post.author }}</a>
+                    le {{ post.date | date: "%d/%m/%Y" }}
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            {% endfor %}
+            <!-- Pager-->
+            <!--<div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>-->
+        </div>
+    </div>
+</div>
